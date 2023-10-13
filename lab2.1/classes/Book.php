@@ -2,13 +2,8 @@
 //В классе Book создайте свойства title, author, description, price и
 //метод getHTML(), возвращающий информацию в виде HTML
 
-class Book {
 
-    const BOOK_HTML = 'HTML';
-    const BOOK_JSON = 'JSON';
-    const BOOK_CSV = 'CSV';
-    const BOOK_ARRAY = 'ARRAY';
-
+class Book extends Goods{
 
     public $title;
     public $author;
@@ -19,18 +14,19 @@ class Book {
     // title, author, description, price
 
     public function __construct($title, $author, $description, $price){
-        $this->title = $title;
+//        $this->title = $title;
+        parent::__construct($title, $price);
         $this->author = $author;
         $this->description = $description;
-        $this->price = $price;
+//        $this->price = $price;
     }
 
     public function __destruct(){
         echo "Книга {$this->title} удалена<br />";
     }
 
-    //public function get($format = Book::BOOK_HTML){
-    public function get($format = self::BOOK_HTML){
+    //public function get($format = parent::GOODS_HTML){
+    public function get($format = self::GOODS_HTML){
         $method = "get".$format;
         return $this->$method();
     }
@@ -44,9 +40,15 @@ class Book {
     <div class="price">{$this->price}</div>
 </div>
 HTML;
+    }
 
+    public function getARRAY(){
+        return [
+            "title" => $this->title,
+            "author" => $this->author,
+            "description" => $this->description,
+            "price" => $this->price
+            ];
 
     }
 }
-
-?>
