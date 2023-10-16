@@ -1,0 +1,1 @@
+>* https://interview.cups.online/
