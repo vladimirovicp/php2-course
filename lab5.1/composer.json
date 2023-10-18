@@ -8,6 +8,13 @@
     ],
     "minimum-stability": "stable",
     "require": {
-        "fakerphp/faker": "^1.23"
+        "fakerphp/faker": "^1.23",
+        "monolog/monolog": "^3.4"
+    },
+    "autoload": {
+        "psr-4": {
+            "App\\": "src/App/",
+            "Vendor\\Namespace\\": ""
+        }
     }
 }

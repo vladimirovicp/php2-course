@@ -1,6 +1,8 @@
 # Модуль 5. Composer
 ## Практическая №5.1: Работа с composer
 
+Установить Monolog и создать экземпляр
+
 Убедитесь, что у вас есть сomposer или скачайте и установите его
 (https://www.youtube.com/watch?v=X-yrrI11qdE). Обновите composer self-update.
 Создайте файл composer.json при помощи команды composer init. Установите phpunit:
