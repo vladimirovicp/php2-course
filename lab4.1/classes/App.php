@@ -2,11 +2,7 @@
 
 class App{
     public function __invoke(){
-//        $model = new Model();
-//        $controller = new Controller($model);
         $controller = new Controller();
-//        $view = new View($controller, $model);
-
         $action = $_GET['action'] ?? 'index';
 
         if (isset( $action ) && !empty($action)) {
@@ -17,6 +13,5 @@ class App{
                 die;
             }
         }
-//        echo $view->render();
     }
 }
