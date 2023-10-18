@@ -1,0 +1,13 @@
+{
+    "name": "kings/lab5.1",
+    "type": "project",
+    "authors": [
+        {
+            "name": "Petr"
+        }
+    ],
+    "minimum-stability": "stable",
+    "require": {
+        "fakerphp/faker": "^1.23"
+    }
+}
