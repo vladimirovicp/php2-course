@@ -7,7 +7,7 @@ class App{
         $controller = new Controller();
 //        $view = new View($controller, $model);
 
-        $action = $_GET['action'];
+        $action = $_GET['action'] ?? 'index';
 
         if (isset( $action ) && !empty($action)) {
             try{
