@@ -2,7 +2,10 @@
     "autoload": {
         "psr-4": {
             "App\\": "src/App/",
-            "Vendor\\Namespace\\": ""
+            "Vendor\\Namespace\\" : ""
         }
+    },
+    "require": {
+        "friendsofphp/php-cs-fixer": "^3.5"
     }
 }
