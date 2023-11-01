@@ -57,6 +57,20 @@
     $obj  = new MyClass1();
     $obj2 = new MyClass2();
 ```
+
+
+```php
+    spl_autoload_register(function ($class_name) {
+        if( file_exists($file = $class_name . '.php')){
+            include_once $file;
+        }
+    });
+    
+    $obj  = new MyClass1();
+    $obj2 = new MyClass2();
+```
+
+
 ### Конструкторы и деструкторы
 
 ```php
